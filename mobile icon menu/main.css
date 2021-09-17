@@ -1,0 +1,29 @@
+.container {
+  text-align: center;
+  display: inline-block;
+}
+
+.container .inner1, .container .inner2, .container .inner3 {
+  width: 35px;
+  height: 3px;
+  background-color: black;
+  border: 1px solid black;
+  margin: 6px 0px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.change .inner1, .change .container .inner2, .container .change .inner2, .change .container .inner3, .container .change .inner3 {
+  -webkit-transform: rotate(-45deg) translate(-10px, 6px);
+          transform: rotate(-45deg) translate(-10px, 6px);
+}
+
+.change .inner2, .change .container .inner3, .container .change .inner3 {
+  opacity: 0;
+}
+
+.change .inner3 {
+  -webkit-transform: rotate(45deg) translate(-9px, -6px);
+          transform: rotate(45deg) translate(-9px, -6px);
+}
+/*# sourceMappingURL=main.css.map */

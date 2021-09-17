@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #c23616;
+        }
+
+    /* <<<---------------------START HUMBURGER MENU---------------------> */
+
+        .container{
+            width: 50px;
+            height: 40px;
+            position: absolute;
+            top: 30%;
+            left:40%;
+            background-color:black ;
+            border: 1px solid red;
+            text-align: center;
+            padding-top: 2px;
+            padding-bottom: 38px;
+            border-radius: 5px;
+        
+        } 
+
+        .container div{
+
+            width: 35px;
+            height: 4px;
+            margin: 6px;
+            border: 1px solid red;
+        background-color: red;
+        transition: .6s;
+        }
+       
+        .toggle .inner1{
+            transform: rotate(45deg) translate(7px,8px);
+
+        }
+        .toggle .inner2{
+        opacity: 0;
+        }
+        .toggle .inner3{
+            transform: rotate(-45deg) translate(6px,-7px);
+            
+        }
+        .toggle aside{
+            visibility: visible;
+        }
+
+
+
+/* <-------------------ASIDE TAGS-----------------------> */
+
+        aside{
+            /* display: none; */
+            /* visibility: hidden; */
+            background-color: black;
+            /* background-color: greenyellow; */
+            width: 120px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+            overflow: hidden;
+            
+            
+        }
+        aside a{
+            /* display: none; */
+            padding:20px 50px;
+            text-decoration: none;
+            font-size: 20px;
+            color: red;
+
+
+        }
+        aside a:hover{
+            background-color:whitesmoke;
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <div class="container">
+        <div class="inner1"></div>
+        <div class="inner2"></div>
+        <div class="inner3"></div>
+    </div>
+
+
+
+    <aside class="aside">
+        <a href="" class="items">
+            <i class="fas fa-home    "></i>
+        </a>
+        <a href="" class="items">
+            <i class="fas fa-horse    "></i>
+        </a>
+        <a href="" class="items">
+            <i class="fas fa-wallet    "></i>
+        </a> 
+        <a href="" class="items">
+            <i class="fas fa-warehouse    "></i>
+        </a>
+        <a href="" class="items">
+            <i class="fas fa-school    "></i>
+        </a>
+</aside>
+
+   
+
+    <script>
+
+
+// <--------------------CODE FOR THE ANIMATION HUMBURGER  MENU-------------------------->
+
+        const con = document.querySelector('.container')
+        con.addEventListener('click',function(){
+            this.classList.toggle('toggle');
+
+          
+            // this.style.backgroundColor='red';    
+        })
+
+        // <---------------TOGGLE THE ASIDE TAG BY JQUERY------------>
+
+        $(document).ready(function(){
+            $('.container').click(function(){
+                // $('aside').style('visibility','visible')
+                $('aside').toggle(500,function(){
+                })
+            })
+        })
+
+
+    </script>
+
+</body>
+</html>

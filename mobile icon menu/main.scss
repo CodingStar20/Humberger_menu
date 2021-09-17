@@ -1,0 +1,31 @@
+.container {
+	// background-color: red;
+	text-align: center;
+	display: inline-block;
+	.inner1 {
+		width: 35px;
+		height: 3px;
+		background-color: black;
+		border: 1px solid black;
+		margin: 6px 0px;
+		transition: 0.4s;
+	}
+	.inner2 {
+		@extend .inner1;
+	}
+	.inner3 {
+		@extend .inner2;
+	}
+}
+
+.change {
+	.inner1 {
+		transform: rotate(-45deg) translate(-10px, 6px);
+	}
+	.inner2 {
+		opacity: 0;
+	}
+	.inner3 {
+		transform: rotate(45deg) translate(-9px, -6px);
+	}
+}

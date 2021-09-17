@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .inner1{
+            border: 1px solid red;
+            position: absolute;
+            top: 40%;
+            left: 30%;
+            width: 250px;
+            height: 40px;
+            background-color: rebeccapurple;
+            transform: rotateX(0deg) translate(-120px,60px);
+            perspective: 800px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="inner1">
+
+    </div>
+
+    <button class="btn">click here</button>
+
+
+
+    <script>
+        var inner= document.getElementsByClassName('btn');
+        console.log(inner.length)
+        for(var i=0; i<=inner.length;i++){
+            console.log(inner[i])
+        }
+
+    </script>
+    
+</body>
+</html>l
